@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Agregar usuario
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,32 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Agregar usuario</ion-title>
     </ion-toolbar>
   </ion-header>
+  
+  <ion-item>
+    <ion-label>Name</ion-label>
+    <ion-input [(ngModel)]="newUser.name" placeholder="Enter User name"></ion-input>
+  </ion-item>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-item>
+    <ion-label>Genre</ion-label>
+    <ion-select [(ngModel)]="newUser.genre" interface="popover" value="Male">
+      <ion-select-option value="Male">Male</ion-select-option>
+      <ion-select-option value="Female">Female</ion-select-option>
+      <ion-select-option value="Other">Other</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Description</ion-label>
+    <ion-textarea [(ngModel)]="newUser.description" rows="6" cols="20" placeholder="Type here"></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>URL Image</ion-label>
+    <ion-input inputmode="url" [(ngModel)]="newUser.imageURL" placeholder="Enter URL"></ion-input>
+  </ion-item>
+  <ion-button expand="block" (click)="addUser()">Agregar Usuario</ion-button>
 </ion-content>

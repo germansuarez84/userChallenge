@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
+
+  developer = {name:"German Suárez", info:"Ingeniero de Sistemas UDi, especialista en Gerencia de Proyectos Universidad El Bosque. Asesor en la Oficina de Tecnologías de la Información - Agencia Nacional de Hidrocarburos"};
   constructor() {}
 
 }
