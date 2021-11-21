@@ -12,24 +12,20 @@
       <ion-title size="large">Listado de usuarios</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  
-  
-        
+       
     <ion-list>
-      <ion-list-header>
-        Usuarios
-      </ion-list-header>
-      
-      <ion-item *ngFor="let user of this.globals.users"> 
-        
-          <ion-icon slot="start" name="sparkles-outline"></ion-icon>
-          <ion-label>
+           
+      <ion-item *ngFor="let user of UsersList"> 
+        <div class="userCard">
+           <b><ion-label color="dark">
             {{user.name}}
-          </ion-label>
+          </ion-label></b><br>
+          <ion-label class="ion-text-wrap" color="secondary">{{user.description}}</ion-label>
+          <ion-button shape="round" (click)="userQuickView(user)">VIEW MORE</ion-button>
         
-        
+        </div>
       </ion-item>
+    
     </ion-list>
-    <ion-button expand="block" (click)="showUsers()">Mostrar usuarios</ion-button>
+    
 </ion-content>

@@ -1,0 +1,18 @@
+<ion-card>
+
+  <ion-card-header>
+    <ion-card-title>{{userSelected.name}}</ion-card-title>
+    <ion-card-subtitle> {{userSelected.description}}</ion-card-subtitle>
+    
+  </ion-card-header>
+
+  <ion-item >
+      <img src="{{userSelected.imageURL}}" />
+  </ion-item>
+  <ion-item>
+    <ion-icon name="{{genderIcon}}"></ion-icon>
+    <ion-label>{{userSelected.gender}}</ion-label>
+  </ion-item>
+
+</ion-card>
+<ion-button fill="outline" color="success" (click)="goBackToUsers()" slot="start">Volver</ion-button>

@@ -15,12 +15,12 @@
   
   <ion-item>
     <ion-label>Name</ion-label>
-    <ion-input [(ngModel)]="newUser.name" placeholder="Enter User name"></ion-input>
+    <ion-input [(ngModel)]="txtName" placeholder="Enter User name"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label>Genre</ion-label>
-    <ion-select [(ngModel)]="newUser.genre" interface="popover" value="Male">
+    <ion-select [(ngModel)]="lstGender" interface="popover" value="Male">
       <ion-select-option value="Male">Male</ion-select-option>
       <ion-select-option value="Female">Female</ion-select-option>
       <ion-select-option value="Other">Other</ion-select-option>
@@ -29,12 +29,12 @@
 
   <ion-item>
     <ion-label>Description</ion-label>
-    <ion-textarea [(ngModel)]="newUser.description" rows="6" cols="20" placeholder="Type here"></ion-textarea>
+    <ion-textarea [(ngModel)]="txtDescription" rows="6" cols="20" placeholder="Type here"></ion-textarea>
   </ion-item>
 
   <ion-item>
     <ion-label>URL Image</ion-label>
-    <ion-input inputmode="url" [(ngModel)]="newUser.imageURL" placeholder="Enter URL"></ion-input>
+    <ion-input inputmode="url" [(ngModel)]="txtImageURL" placeholder="Enter URL"></ion-input>
   </ion-item>
   <ion-button expand="block" (click)="addUser()">Agregar Usuario</ion-button>
 </ion-content>
